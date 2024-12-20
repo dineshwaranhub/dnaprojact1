@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Animations</title>
+    <style>
+        
+        
+        
+        body {
+            
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            border: 4px solid #000; /* Border line around the whole page */
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            border-bottom: 2px solid #000;
+        }
+
+        .header img {
+            height: 80px;
+            width: 400;
+            
+        }
+
+        .back-button {
+            font-size: 1em;
+            color: #e7e5e5;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #100101;
+            border-radius: 4px;
+            background-color: #0b0a0a;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #eaeaea;
+            color: #fbf7f7;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        .item.fast {
+            animation-duration: 1s; /* Faster duration for fast slides */
+        }
+
+        .item:nth-child(odd) {
+            animation-name: slide-right-to-left; /* Slide from right to left */
+            transform: translateX(100%);
+            animation-duration: 2s; /* Slower duration */
+        }
+
+        .item:nth-child(even) {
+            animation-name: slide-left-to-right; /* Slide from left to right */
+            transform: translateX(-100%);
+            flex-direction: row-reverse;
+            animation-duration: 1.5s; /* Faster duration */
+        }
+
+        .item img {
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .item .content {
+            width: 55%;
+            padding: 0 20px;
+        }
+
+        .item h2 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .item p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Slide animations */
+        @keyframes slide-right-to-left {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slide-left-to-right {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+
+        /* Staggered animation delays */
+        .item:nth-child(1) { animation-delay: 0.1s; }
+        .item:nth-child(2) { animation-delay: 0.2s; }
+        .item:nth-child(3) { animation-delay: 0.3s; }
+        .item:nth-child(4) { animation-delay: 0.4s; }
+        .item:nth-child(5) { animation-delay: 0.5s; }
+        .item:nth-child(6) { animation-delay: 0.6s; }
+        .item:nth-child(7) { animation-delay: 0.7s; }
+        .item:nth-child(8) { animation-delay: 0.8s; }
+        .item:nth-child(9) { animation-delay: 0.9s; }
+        .item:nth-child(10) { animation-delay: 1s; }
+    </style>
+</head>
+<body>
+    
+    <body style="background-image: url('fback.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;">
+
+
+        
+    <div class="header">
+        <title>tyt</title>
+        <a href="#" class="back-button">Back</a>
+        <h1 style="margin: 0 auto; text-align: center;">FUNCTIONS
+        </h1>
+       
+    </div>
+
+    <div class="container">
+        <!-- Content remains the same -->
+        <!-- Repeated structure of items -->
+        <div class="item fast">
+            <img src="hearing.png" alt="Image 1">
+
+            
+            
+            <div class="content">
+                
+                <h1>𝙀𝙖𝙧𝙥𝙞𝙚𝙧𝙘𝙞𝙣𝙜 𝘾𝙚𝙧𝙚𝙢𝙤𝙣𝙮
+                </h1>
+                <p>The ear-piercing ceremony, or "Kadhu Kutthal Vizha", is
+                     an important and traditional ritual in Tamil Nadu
+                     . This ceremony is deeply rooted in Tamil culture and has both spiritual and cultural significance.</p>
+            </div>
+        </div>
+        
+
+        <div class="item">
+            <img src="birthday party.jpg" alt="Image 2">
+            <div class="content">
+                <h1>𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 𝒑𝒂𝒓𝒕𝒚</h1>
+                <p>  <h3>A birthday party is a celebration of someone's birth, typically marked with joy, games, food, and activities. 
+                    In Tamil Nadu, birthday parties are often vibrant and include traditional customs and modern elements.</h3>
+                </p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="baby shower.jpg" alt="Image 3">
+            <div class="content">
+                <h1>𝙑𝙖𝙡𝙖𝙜𝙖𝙥𝙥𝙪</h1>
+                <p> <h3>Valagappu is a traditional Tamil Nadu celebration held to honor and celebrate a pregnant woman's
+                     journey towards motherhood. It's a Tamil custom that takes place during the last few months of
+                      pregnancy. The event marks the transition into motherhood and is a way for the family and fri
+                      ends to wish the expectant mother good health and happiness.</h3> </p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="wedding.jpg" alt="Image 4">
+            <div class="content">
+                <h1>𝙒𝙚𝙙𝙙𝙞𝙣𝙜</h1>
+                <p><H3>A Tamil Nadu wedding is a vibrant and culturally rich celebration that brings together families, traditions, and rituals. It's a joyous occasion marked by elaborate ceremonies, vibrant attire, and a festive atmosphA Tamil Nadu wedding is a vibrant and culturally rich celebration that brings together families, traditions, and rituals. It's a joyous occasion marked by elaborate ceremonies, vibrant attire, and a festive atmosph</H3></p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="engagement.jpg" alt="Image 5">
+            <div class="content">
+                <h1>𝙀𝙣𝙜𝙖𝙜𝙚𝙢𝙚𝙣𝙩</h1>
+                <p><H3>An engagement in Tamil Nadu, known as Nischayathartham or Nischayam, is a significant pre-wedding ceremony that marks the formal announcement of a couple’s intent to marry. It is a joyous and traditional celebration that blends cultural customs, rituals, and blessings from family and friends. Here’s an overview of what a typical Tamil Nadu engagement entails:</H3>.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="poopanir nattu function.png" alt="Image 6">
+            <div class="content">
+                <h1>𝙋𝙪𝙗𝙚𝙧𝙩𝙮 𝙛𝙪𝙣𝙘𝙩𝙞𝙤𝙣</h1> 
+                <p><h3>In Tamil Nadu, the puberty function, commonly referred to as "Puthir Kalyanam" or "Manjal Neerattu Vizha," is a traditional ceremony celebrated to mark a girl's attainment of puberty. This event holds significant cultural and familial importance and is steeped in Tamil customs.</h3></p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="puthumani.jpg" alt="Image 7">
+            <div class="content">
+                <h1>𝙃𝙤𝙪𝙨𝙚𝙬𝙖𝙧𝙢𝙞𝙣𝙜 𝙘𝙚𝙧𝙚𝙢𝙤𝙣𝙮</h1>
+                <p><h3>In Tamil Nadu, a housewarming ceremony is called "Griha Pravesham" (கிரஹ பிரவேசம்) or "Veedu Kattuvizha" (வீடு கட்டுவிழா). This auspicious event marks the first entry into a new home and is deeply rooted in Tamil cultural and spiritual practices. </h3></p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="baby  nameing.jpg" alt="Image 8">
+            <div class="content">
+                <h1>𝘽𝙖𝙗𝙖𝙮 𝙉𝙖𝙢𝙞𝙣𝙜 𝙛𝙪𝙣𝙘𝙩𝙞𝙤𝙣</h1>
+                <p><h3>In Tamil Nadu, the baby naming ceremony is called "Thottil Ceremony" (தொட்டில் விழா) or "Namakarana Vizha" (நாமகரண விழா). This event is a significant milestone in Tamil culture, where a newborn is formally given their name in the presence of family, friends, and well-wishers. It is filled with traditional rituals and celebrations.</h3></p>
+            </div>
+        </div>
+        
+        <!-- Add other items as shown previously -->
+    </div>
+    <footer style="background-color: #f3f1f1; color: rgb(5, 3, 3); text-align: center; padding: 2px 0; position: fixed; bottom: 0; width: 100%;">
+        <p>&copy; DineH catering management system.
+        
+    </footer>
+    
+</body>
+</html>
